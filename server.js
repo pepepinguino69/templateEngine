@@ -43,7 +43,7 @@ res.render('existingProduct', {data}))});
 
 app.get('/pug/productos', (req, res) => {app.set("view engine", "pug");myInstance.getAll().then((data) => 
 res.render('existingProduct', {data}))});
-app.get('/addproduct', (req, res) => {
+app.get('/addproduct', (req, res) => {app.set("view engine", "ejs");
 res.render('newProduct');
 })
 app.post('/productos/',(req, res)=>{myInstance.save(req.body);res.render('/productos')});

@@ -1,0 +1,34 @@
+HTML
+  BODY
+    .header
+    DIV
+      DIV
+        a(href="/productos") productos
+      DIV
+        a(href="/") falsa home
+      DIV
+        H2 Crear Productos
+      DIV
+        #submit
+        FORM
+          DIV
+            LABEL Nombre del Producto
+            #inputtitle
+            INPUT(type="text")
+          DIV
+            LABEL Precio del Producto
+            #inputPrice
+            INPUT(type="text")
+          DIV
+          LABEL URL
+            #inputUrl
+            INPUT(type="text")
+          DIV
+            BUTTON SUBMIT
+SCRIPT.
+  boton= document.querySelector('#submit')
+  boton.addEventListener('click',e=>{e.preventDefault();alert("aaaa")})
+         
+
+          
+           

@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    
+      h2,h4 {text-align:center;padding-bottom:2rem}
+.price{text-align:right;width:5rem;padding-left:3rem}
+      .img{width:40rem;display:flex;justify-content:center}
+.midlaner {background-color: #eeeeee}
+.toplaner {background-color: #ffea00}
+      .flex{display:flex;justify-content:space-around}
+   .header{display:flex;justify-content:space-around;background-color:yellow}
+      
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool thing made with Glitch">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>CRUD c0n Handlebars</title>
+
+  </head>
+  <body>
+      <h2>mis productos</h2>
+        <div class="header">
+       
+       <div>
+         <a href="/">Falsa home</a>
+       </div>
+  <div>
+         <a href="/addproduct">Agregar producto</a>
+       </div>
+  
+     </div>
+    
+    <div class="flex">
+    
+      
+      <table>
+        
+      
+      <thead>
+      
+    <th>ID</th>
+    <th>Title</th>
+    <th class="price">Price</th>
+    <th class="img">Image</th>
+          
+  </thead>
+      <tbody>
+        {{#each productos}}
+    <tr>
+      <td><a href="#">{{this.id}}</a></td>
+      <td>{{this.title}}</td>
+      <td class="price">{{this.price}}</td>
+      <td class="img"><img src="{{this.url}}"/></td>
+    </tr>
+        {{/each}}
+  </tbody>
+        </table>
+    </div>
+  </body>
+</html>

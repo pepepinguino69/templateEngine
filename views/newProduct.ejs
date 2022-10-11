@@ -1,0 +1,72 @@
+   
+        <a href="/productos">productos</a>
+         <a href="/">Falsa Home</a>
+     <h2>Crear Producto</h2>
+     <div class="container">
+   <form action="https://important-glossy-tempo.glitch.me/productos/" method="post" autocomplete="off" id="form">
+  
+     
+     <div> 
+      <label>Nombre del Producto</label>
+       <input id="inputTitle" type="text" name="inputTitle">
+    </div>
+     <div>
+       <label>Precio del producto</label>
+       <input id="inputPrice" type="text" name="inputPrice">
+     </div>
+     <div>
+       <label>URL de la foto</label>
+       <input id="inputUrl" type="text" name="inputUrl">
+     </div>
+    
+     
+     
+     <button type="submit">Crear Producto</button>
+   </form>
+     </div>
+     
+<script>
+form=document.querySelector("#form")
+form.addEventListener('submit',(e)=>{e.preventDefault();productosCore("POST")})
+                                                                                                                                                                           
+  
+async function contactApi(url, configComm) {
+let base = "https://difficult-diamond-sulfur.glitch.me";
+const response = await fetch(base + url, configComm);
+  
+}
+
+function productosCore(type) {
+  
+let base = "https://difficult-diamond-sulfur.glitch.me";
+let config = {
+  method: `${type}`,
+  headers: {
+    "Content-type": "application/json; charset=UTF-8",},
+};
+  
+
+if (type == 'POST') {
+  offset = "/productos"
+}; 
+if (type!='DELETE'){
+  config.body = JSON.stringify({ title:inputTitle.value,url:inputUrl.value,price:inputPrice.value})
+}
+else {
+  if (confirm('esta Seguro?')) {
+    config.method = 'DELETE' }
+}
+
+  
+contactApi(offset,config)
+  
+}
+ 
+  
+  
+</script>
+  
+  </body>
+</html>
+
+       

@@ -1,0 +1,24 @@
+
+  <h2>mis productos (renderizados con ejs)</h2> 
+  <div class="header">
+</div>
+  <table>
+    <thead>
+      <th>id</th>
+       <th>title</th>
+       <th>price</th>
+       <th>url</th>  
+    </thead>
+    <tbody>
+      <% for(let i=0; i<data.length; i++) {%>
+      <tr>
+        <td><%=data[i]['id'] %></td>
+        <td><%=data[i]['title']%></td>
+        <td><%=data[i]['price']%></td>
+        <td><img src=<%=data[i]['url']%>></td>
+          
+      </tr>
+<% } %>
+   
+</table>
+

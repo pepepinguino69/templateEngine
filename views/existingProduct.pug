@@ -1,0 +1,21 @@
+HTML
+  H2 mis productos (renderizados con pug)
+  .header
+  DIV  Falsa home
+  DIV Agregar producto
+    .flex
+    DIV
+    TABLE
+      THEAD
+        TH ID
+        TH Title
+        TH Price
+        TH Image 
+      TBODY
+        each entry in data
+          TR
+            TD= entry.id
+            TD= entry.title
+            TD= entry.price
+            TD
+              img(src=entry.url)
